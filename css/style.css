@@ -1,0 +1,27 @@
+.types {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.type {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    margin: 0.5%;
+    padding: 1%;
+    flex: 1 16%;
+}
+.type:hover {
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+.type-link {
+    text-decoration: none;
+    color: #212529;
+}
+.type-name {
+    text-align: center;
+    font-size: large;
+}
+
+.types-header-sect {
+    text-align: center;
+}
