@@ -17,6 +17,7 @@ body
     border: none;
     outline: none;
     background-color: #ffffff;
+    cursor: pointer;
 }
 .type:hover {
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
