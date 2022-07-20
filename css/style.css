@@ -1,3 +1,9 @@
+body
+{
+  font-family: "Roboto", sans-serif;
+  padding-top: 44px;
+}
+
 .types {
     display: flex;
     flex-wrap: wrap;
@@ -24,4 +30,16 @@
 
 .types-header-sect {
     text-align: center;
+}
+
+.header-menu-link {
+    text-decoration: none;
+    color: #212529;
+}
+.header-menu-item {
+    list-style-type: none;
+}
+.header-menu {
+    display: flex;
+    justify-content: space-around;
 }
