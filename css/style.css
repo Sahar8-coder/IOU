@@ -15,13 +15,12 @@ body
     margin: 0.5%;
     padding: 1%;
     flex: 1 16%;
+    border: none;
+    outline: none;
+    background-color: #ffffff;
 }
 .type:hover {
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
-}
-.type-link {
-    text-decoration: none;
-    color: #212529;
 }
 .type-name {
     text-align: center;
