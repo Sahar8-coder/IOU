@@ -46,7 +46,7 @@ body
     width: 160px;
 }
 .menu-logo {
-    
+    margin-left: -13%;
 }
 .header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
