@@ -1,7 +1,6 @@
 body
 {
   font-family: "Roboto", sans-serif;
-  padding-top: 44px;
 }
 
 .types {
@@ -41,4 +40,15 @@ body
 .header-menu {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+.logo {
+    width: 160px;
+}
+.menu-logo {
+    
+}
+.header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+    padding-bottom: 1px;
 }
