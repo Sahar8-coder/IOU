@@ -59,7 +59,12 @@ body
     padding-left: 5%;
     padding-right: 5%;
 }
-.theory-p {
+.theory-p, .disc-text {
     font-size: large;
     line-height: 2;
+}
+
+.disc-content {
+    padding-left: 5%;
+    padding-right: 5%;
 }
