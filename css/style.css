@@ -53,3 +53,13 @@ body
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
     padding-bottom: 1px;
 }
+
+.theory {
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.theory-p {
+    font-size: large;
+    line-height: 2;
+}
