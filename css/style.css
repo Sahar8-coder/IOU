@@ -68,3 +68,20 @@ body
     padding-left: 5%;
     padding-right: 5%;
 }
+.formula1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    text-align: center;
+}
+.formula2a, .formula3a {
+    display: flex;
+}
+.formula4{
+    vertical-align: middle;
+}
+.formula5a{
+    vertical-align: middle;
+}
