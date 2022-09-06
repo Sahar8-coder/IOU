@@ -78,6 +78,7 @@ body
 }
 .formula2a, .formula3a {
     display: flex;
+    flex-wrap: wrap;
 }
 .formula4{
     vertical-align: middle;
@@ -87,4 +88,8 @@ body
 }
 .formula7 {
     vertical-align: middle;
+}
+
+.disc-formula {
+    
 }
