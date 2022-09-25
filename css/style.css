@@ -52,6 +52,7 @@ body
 .header {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
     padding-bottom: 1px;
+    padding-top: 1px;
     width: 100%;
 }
 
