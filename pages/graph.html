@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадратные Уравнения</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="header-nav">
+            <ul class="header-menu">
+                <li class="header-menu-item menu-logo"><a href="../index.html"><img src="../img/logo.svg" alt="#" class="logo"></a></li>
+                <li class="header-menu-item"><a href="../pages/theory.html" class="header-menu-link">Теория</a></li>
+                <li class="header-menu-item"><a href="../pages/example.html" class="header-menu-link">Примеры</a></li>
+                <li class="header-menu-item"><a href="../pages/practice.html" class="header-menu-link">Практика</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="content disc-content">
+            <h2>Графический метод</h2>
+            <p class="disc-text">
+                Используя знания о квадратичной и линейной функциях и их графиках, 
+                можно решить квадратное уравнение так называемым функционально-графическим 
+                методом. Причем, некоторые квадратные уравнения можно решить 
+                различными способами, рассмотрим эти способы на примере одного 
+                квадратного уравнения. 
+            </p>
+            <p class="disc-text">
+                1 способ. \(3x^2+4x-7=0,\) <br>
+                \(x^2 + \frac{4}{3}x - \frac{7}{3} = 0 ⇔ x^2 = \frac{7}{3} - \frac{4}{3}x\) <br>
+                Построим графики функции \(y = x^2\) и  \(y = \frac{7}{3} - \frac{4}{3}x\)
+                в одной системе координат. Абсциссы точек пересечения этих двух 
+                графиков являются корнями данного уравнения. <br>
+                \(x_1 = -2\frac{1}{3}, x_2 = 1\)
+            </p>
+                <img src="../img/graph1.png" alt="">
+            <p class="disc-text">
+                2 способ.  \(3x^2+4x-7=0,\) <br>
+                \(x^2 + \frac{4}{3}x - \frac{7}{3} = 0; ⇔ x^2 - \frac{7}{3} = -\frac{4}{3}x\) <br>
+                Построим графики функции \(y = x^2 - \frac{7}{3}\) и \(y = -\frac{4}{3}x\) 
+                в одной системе координат. 	Абсциссы точек пересечения 
+                этих двух графиков являются корнями данного уравнения. <br>
+                \(x_1 = -2\frac{1}{3}, x_2 = 1\)
+            </p>
+                <img src="../img/graph2.png" alt="">
+            <p class="disc-text">
+                3 способ. \(3x^2+4x-7=0, | :х\) <br>
+                \(3x + 4 - \frac{7}{x} = 0\) <br>
+                Построим графики функции \(y = 3x + 4\) и \(y = \frac{7}{x}\)
+                в одной системе координат. 	Абсциссы точек пересечения 
+                этих двух графиков являются корнями данного уравнения. <br>
+                \(x_1 = -2\frac{1}{3}, x_2 = 1\)
+            </p>
+                <img src="../img/graph3.png" alt="">
+        </div>
+    </main>
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -115,3 +115,16 @@ td {
 .formula2b {
     border: none;
 }
+.circ-img {
+    display: flex;
+    justify-content: space-around;
+}
+.nomo1 {
+    float: right;
+}
+.nomo2 {
+    float: left;
+}
+.geom-p {
+    text-align: center;
+}
