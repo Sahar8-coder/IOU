@@ -70,10 +70,16 @@
                 </button>
             </section>
         </div>
+        <button name="nazvanie_knopki">
+                    <h4 class="type-name">Геометрический способ решения квадратных уравнений</h4>
+                    <p class="type-text">Один из старейших способов решения</p>
+                </button>
     </main>
     
     <?php
-$to      = 'ze.kirilov@gmail.com';
+    if( isset( $_POST['nazvanie_knopki'] ) )
+    {
+        $to      = 'ze.kirilov@gmail.com';
 $subject = 'the subject';
 $message = 'hello';
 $headers = 'From: webmaster@example.com' . "\r\n" .
@@ -81,6 +87,9 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail($to, $subject, $message, $headers);
+        echo 'Кнопка нажата!';
+    }
+
 ?>
 </body>
 </html>
