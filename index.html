@@ -7,6 +7,7 @@
     <title>Квадратные Уравнения</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    
     <script type="text/javascript" id="MathJax-script" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
     </script>
@@ -70,5 +71,19 @@
             </section>
         </div>
     </main>
+    
+    <?php
+$to      = 'ze.kirilov@gmail.com';
+$subject = 'the subject';
+$message = 'hello';
+$headers = 'From: webmaster@example.com' . "\r\n" .
+    'Reply-To: webmaster@example.com' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail($to, $subject, $message, $headers);
+?>
+<?php
+include_once('/index.php');
+echo 'ПРИВЕТ МИР!';
 </body>
 </html>
