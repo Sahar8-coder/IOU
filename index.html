@@ -70,20 +70,9 @@
                 </button>
             </section>
         </div>
+        <form action="api/index.php" method="POST">
+            <input name="button" type="submit" value="Выполнить" />
+       </form>
     </main>
-    
-    <?php
-$to      = 'ze.kirilov@gmail.com';
-$subject = 'the subject';
-$message = 'hello';
-$headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-mail($to, $subject, $message, $headers);
-?>
-<?
-include ("index.php");
-?>
 </body>
 </html>

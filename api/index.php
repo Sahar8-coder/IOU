@@ -77,7 +77,7 @@
     </main>
     
     <?php
-    if( isset( $_POST['nazvanie_knopki'] ) )
+    if( isset( $_POST['button'] ) )
     {
         $to      = 'ze.kirilov@gmail.com';
 $subject = 'the subject';
