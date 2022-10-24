@@ -8,17 +8,17 @@ let transporter = nodemailer.createTransport({
     },
   })
 
+  await transporter.sendMail({
+    from: '"Node js" <ze.kirilov@gmail.com>',
+    to: 'ze.kirilov@gmail.com, ze.kirilov@gmail.com',
+    subject: 'Message from Node js',
+    text: 'This message was sent from Node js server.',
+    html:
+      'This <i>message</i> was sent from <strong>Node js</strong> server.',
+  })
 
 
-document.getElementById('button').onclick = async function() {
+document.getElementById('button').onclick = function() {
     alert("button was clicked");
-    await transporter.sendMail({
-        from: '"Node js" <ze.kirilov@gmail.com>',
-        to: 'ze.kirilov@gmail.com, ze.kirilov@gmail.com',
-        subject: 'Message from Node js',
-        text: 'This message was sent from Node js server.',
-        html:
-          'This <i>message</i> was sent from <strong>Node js</strong> server.',
-      })
  }
  console.log(result)
