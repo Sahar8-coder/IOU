@@ -1,4 +1,4 @@
-const mailer = require('nodemailer')
+const mailer = require('../node_modules/nodemailer')
 
 let transporter = mailer.createTransport({
     service: 'gmail',
