@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квадратные Уравнения</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-4">
+                    <form action="mail.php" method="POST">
+                        <legend>Заголовок формы</legend>
+      
+                        <div class="form-group">
+                            <label for="">Введите ваше имя</label>
+                            <input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="">Введите номер телефона</label>
+                            <input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="">Введите email</label>
+                            <input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
+                        </div>
+                    
+                        <button type="submit" class="btn btn-primary">Отправить форму</button>
+                    </form>
+                </div><!-- .col-sm-4 -->
+            </div> <!-- .row -->
+      
+          </div><!-- /.container -->
+    </main>
+</body>
+</html>
+
 <?php 
 
 require_once('phpmailer/PHPMailerAutoload.php');
