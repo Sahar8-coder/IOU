@@ -1,22 +1,56 @@
-const mailer = require('../node_modules/nodemailer')
+const nodemailer = require("nodemailer");
 
-let transporter = mailer.createTransport({
-    service: 'gmail',
+export default async (req, res) => {
+
+const { firstName, lastName, email, message } = JSON.parse(req.body);
+
+const transporter = nodemailer.createTransport({
+    port: 465,
+    host: "smtp.gmail.com",
     auth: {
-      user: 'ze.kirilov@gmail.com',
-      pass: '815@.LJKC',
+        user: "myEmail@gmail.com",
+        pass: "password",
     },
-  })
+    secure: true,
+});
 
-document.getElementById('button').onclick = async function() {
-    let result = await transporter.sendMail({
-        from: '"Node js" <ze.kirilov@gmail.com>',
-        to: 'ze.kirilov@gmail.com, ze.kirilov@gmail.com',
-        subject: 'Message from Node js',
-        text: 'This message was sent from Node js server.',
-        html:
-          'This <i>message</i> was sent from <strong>Node js</strong> server.',
-      })
-      console.log(result)
-    alert("button was clicked");
- }
+await new Promise((resolve, reject) => {
+    // verify connection configuration
+    transporter.verify(function (error, success) {
+        if (error) {
+            console.log(error);
+            reject(error);
+        } else {
+            console.log("Server is ready to take our messages");
+            resolve(success);
+        }
+    });
+});
+
+const mailData = {
+    from: {
+        name: `${firstName} ${lastName}`,
+        address: "myEmail@gmail.com",
+    },
+    replyTo: email,
+    to: "recipient@gmail.com",
+    subject: `form message`,
+    text: message,
+    html: `${message}`,
+};
+
+await new Promise((resolve, reject) => {
+    // send mail
+    transporter.sendMail(mailData, (err, info) => {
+        if (err) {
+            console.error(err);
+            reject(err);
+        } else {
+            console.log(info);
+            resolve(info);
+        }
+    });
+});
+
+res.status(200).json({ status: "OK" });
+};
