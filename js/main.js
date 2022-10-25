@@ -1,56 +1,38 @@
+"use strict";
 const nodemailer = require("nodemailer");
 
-export default async (req, res) => {
+// async..await is not allowed in global scope, must use a wrapper
+async function main() {
+  // Generate test SMTP service account from ethereal.email
+  // Only needed if you don't have a real mail account for testing
+  let testAccount = await nodemailer.createTestAccount();
 
-const { firstName, lastName, email, message } = JSON.parse(req.body);
-
-const transporter = nodemailer.createTransport({
-    port: 465,
-    host: "smtp.gmail.com",
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
     auth: {
-        user: "myEmail@gmail.com",
-        pass: "password",
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
     },
-    secure: true,
-});
+  });
 
-await new Promise((resolve, reject) => {
-    // verify connection configuration
-    transporter.verify(function (error, success) {
-        if (error) {
-            console.log(error);
-            reject(error);
-        } else {
-            console.log("Server is ready to take our messages");
-            resolve(success);
-        }
-    });
-});
+  // send mail with defined transport object
+  let info = await transporter.sendMail({
+    from: '"Fred Foo 👻" <foo@example.com>', // sender address
+    to: "ze.kirilov@gmail.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Hello world?", // plain text body
+    html: "<b>Hello world?</b>", // html body
+  });
 
-const mailData = {
-    from: {
-        name: `${firstName} ${lastName}`,
-        address: "myEmail@gmail.com",
-    },
-    replyTo: email,
-    to: "recipient@gmail.com",
-    subject: `form message`,
-    text: message,
-    html: `${message}`,
-};
+  console.log("Message sent: %s", info.messageId);
+  // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 
-await new Promise((resolve, reject) => {
-    // send mail
-    transporter.sendMail(mailData, (err, info) => {
-        if (err) {
-            console.error(err);
-            reject(err);
-        } else {
-            console.log(info);
-            resolve(info);
-        }
-    });
-});
+  // Preview only available when sending through an Ethereal account
+  console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+  // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+}
 
-res.status(200).json({ status: "OK" });
-};
+main().catch(console.error);
