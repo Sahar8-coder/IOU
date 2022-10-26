@@ -1,8 +1,9 @@
 "use strict";
 const nodemailer = require("nodemailer");
+const Mail = require("nodemailer/lib/mailer");
 
 // async..await is not allowed in global scope, must use a wrapper
-async function main() {
+ async function main() {
 
   // create reusable transporter object using the default SMTP transport
   let transporter = nodemailer.createTransport({
@@ -57,5 +58,5 @@ const handler = (req, res) => {
 document.getElementById('button').onclick = function() {
   console.log("CLICK");
   alert("button was clicked");
-  info();
+  main();
 };
