@@ -58,5 +58,4 @@ document.getElementById('button').onclick = function() {
   console.log("CLICK");
   alert("button was clicked");
   info();
-  
 };
