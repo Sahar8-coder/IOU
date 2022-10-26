@@ -21,12 +21,6 @@ async function main() {
     text: "Hello world?", // plain text body
     html: "<b>Hello world?</b>", // html body
   });
-  document.getElementById('button').onclick = function() {
-    console.log("CLICK");
-    alert("button was clicked");
-    info();
-    
- };
 
   //console.log("Message sent: %s", info.messageId);
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
@@ -59,3 +53,10 @@ const handler = (req, res) => {
   const d = new Date()
   res.end(d.toString())
 }
+
+document.getElementById('button').onclick = function() {
+  console.log("CLICK");
+  alert("button was clicked");
+  info();
+  
+};
