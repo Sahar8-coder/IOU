@@ -22,8 +22,10 @@ async function main() {
     html: "<b>Hello world?</b>", // html body
   });
   document.getElementById('button').onclick = function() {
-    info();
+    console.log("CLICK");
     alert("button was clicked");
+    info();
+    
  };
 
   //console.log("Message sent: %s", info.messageId);
