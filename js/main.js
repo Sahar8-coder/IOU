@@ -57,6 +57,5 @@ const handler = (req, res) => {
 
 document.getElementById('button').onclick = function() {
   console.log("CLICK");
-  alert("button was clicked");
   main();
 };
