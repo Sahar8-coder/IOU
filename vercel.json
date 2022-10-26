@@ -1,0 +1,10 @@
+{
+    "version": 2,
+    "name": "quadratic",
+    "builds": [
+       { "src": "./js/main.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+       { "src": "/(.*)", "dest": "/app.js" }
+    ]
+ }
